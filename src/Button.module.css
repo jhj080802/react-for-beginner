@@ -1,5 +1,5 @@
 /*모든 button을 아래 스타일로 바꿈*/
-button {
+.btn {
     color : white;
     background-color: palevioletred;
 }
