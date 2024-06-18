@@ -1,7 +1,16 @@
 import PropTypes from "prop-types";
 
 function Button({text}){
-    return <button>{text}</button>;
+    return (
+        <button
+            styles={{
+                backgroundColor: "palevioletred",
+                color: "white",
+            }}
+        >
+            {text}
+        </button>
+    );
 }
 
 Button.PropTypes = {
