@@ -28,8 +28,6 @@ function App() {
             </form>
             <hr />
             <ul>
-                {/* map : 하나의 array에 있는 item을 자신이 원하는 무엇이든지로
-                바꿔주는 역할 */}
                 {toDos.map((item, index) => (
                     <li key={index}>{item}</li>
                 ))}
