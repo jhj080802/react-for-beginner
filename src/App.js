@@ -14,15 +14,19 @@ function App() {
     return (
         <div>
             <h1>The Coins! ({coins.length})</h1>
-            {loading ? <strong>Loading...</strong> : null}
-            <select>
-                {coins.map((coin, i) => (
-                    <option key={i}>
-                        {coin.name} ({coin.symbol}): ${coin.quotes.USD.price}
-                        USD
-                    </option>
-                ))}
-            </select>
+            {loading ? (
+                <strong>Loading...</strong>
+            ) : (
+                <select>
+                    {coins.map((coin, i) => (
+                        <option key={i}>
+                            {coin.name} ({coin.symbol}): $
+                            {coin.quotes.USD.price}
+                            USD
+                        </option>
+                    ))}
+                </select>
+            )}
         </div>
     );
 }
