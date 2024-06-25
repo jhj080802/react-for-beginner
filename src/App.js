@@ -1,9 +1,15 @@
-import{
-    react-router-dom
-npm i react-router-dom@5.3.0
-https://v5.reactrouter.com/web/guides/quick-start
-} from "react-router-dom";
-function App(){
-    return;
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./routes/Home";
+function App() {
+    return (
+        <Router>
+            //Route를 찾음
+            <Switch>
+                <Route path="/">
+                    <Home />
+                </Route>
+            </Switch>
+        </Router>
+    );
 }
 export default App;
