@@ -1,15 +1,17 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Detail from "./routes/Detail";
 import Home from "./routes/Home";
+
 function App() {
     return (
         <Router>
-            //Route를 찾음
-            <Switch>
-                <Route path="/">
-                    <Home />
-                </Route>
-            </Switch>
+            <Routes>
+                <Route path="/Hello" element={"Hello"} />
+                <Route path="/detail" element={<Detail />} />
+                <Route path="/" element={<Home />} />
+            </Routes>
         </Router>
     );
 }
+
 export default App;
