@@ -7,8 +7,11 @@ function App() {
         <Router>
             <Routes>
                 <Route path="/Hello" element={"Hello"} />
-                <Route path="/Detail/:id" element={<Detail />} />
-                <Route path="/" element={<Home />} />
+                <Route
+                    path={`${process.env.PUBLIC_URL}/Detail/:id`}
+                    element={<Detail />}
+                />
+                <Route path={`${process.env.PUBLIC_URL}/`} element={<Home />} />
             </Routes>
         </Router>
     );
